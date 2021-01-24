@@ -1,2 +1,0 @@
-# stillwarter.github.io
-hello
