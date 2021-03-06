@@ -6,19 +6,35 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | stillwarter</title>
+  <title>数列极限与性质 | stillwarter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="你好stillwarter.github.io起源一次test,我将用它记录我的时间。    2021.1.25 23:30这是我第一次正式发布博客我将在这里作为我的锚点，以周为单位总结我的收获得失与设定下一周的目标。  珍惜我剩余的学生时代，“静水深流”，“天道酬勤”，这两句源于我高中尊敬的两位老师，我没有去践行他们，让时光从我手中溜走。希望一切来得及。">
+  <meta name="description" content="def什么是数列：   数列极限定义：数列存在单调性和有界性（不存在其他函数性质） 无穷小前2个较简单，第3个是考点 无穷大ps：无穷大与无界等价吗？不等价。无穷大可以推出无界，无界无法推出无穷大。{1,0,2,0,3,0,4,0…….}我的理解：无穷大意味着存在这样的数列在第n项制极大，而无界存在这样的情况，如果坐标上不存在数列，我们就不能说它是有界的，即为无界，也不能说它是无穷大。故无界无法推">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/01/24/hello-world/index.html">
+<meta property="og:title" content="数列极限与性质">
+<meta property="og:url" content="http://example.com/2021/03/06/2.%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%B8%8E%E6%80%A7%E8%B4%A8/index.html">
 <meta property="og:site_name" content="stillwarter">
-<meta property="og:description" content="你好stillwarter.github.io起源一次test,我将用它记录我的时间。    2021.1.25 23:30这是我第一次正式发布博客我将在这里作为我的锚点，以周为单位总结我的收获得失与设定下一周的目标。  珍惜我剩余的学生时代，“静水深流”，“天道酬勤”，这两句源于我高中尊敬的两位老师，我没有去践行他们，让时光从我手中溜走。希望一切来得及。">
+<meta property="og:description" content="def什么是数列：   数列极限定义：数列存在单调性和有界性（不存在其他函数性质） 无穷小前2个较简单，第3个是考点 无穷大ps：无穷大与无界等价吗？不等价。无穷大可以推出无界，无界无法推出无穷大。{1,0,2,0,3,0,4,0…….}我的理解：无穷大意味着存在这样的数列在第n项制极大，而无界存在这样的情况，如果坐标上不存在数列，我们就不能说它是有界的，即为无界，也不能说它是无穷大。故无界无法推">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-01-24T11:30:06.682Z">
-<meta property="article:modified_time" content="2021-01-25T15:47:57.309Z">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcW3I*wOC0.aASDqcLvHTsJq24crqQ49QvHRDuf.lt7J1SODxqy1eNqt9l4RtTW3vdE6BKOTkmZAzo.2DqPalmcY!/b&bo=IQIvAQAAAAADFz8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxRNQjP*tB79f9b82VlsSVjzANgFYPQdHNhiXUoZN0tY*c1jp8yL2aMnc6upC3Tp*sM!/b&bo=*QJGAQAAAAADF4o!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxTqpJ8jgKDsyeTZkoe74l3lfkUoWjHg4S9wBXQ9rGzMS6UZK9.AjSIbpTzfFlEHoZE!/b&bo=swKeAQAAAAADFxw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxRfmT8p9frRuV6HrCWot5U0C1R0KjS*0wIz9pFO7hJgBWjAJxgvkqO1mMHQr4jLbL8!/b&bo=oQLLAQAAAAADJ2s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GjvEshOe59MjX35bqX5gngN0w*tSrKbKAP6oRURin1XH32gnbD7RlTnQsQsTZVPR.k!/b&bo=pAITAgAAAAADF4U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9Gjd92eAAu97pcicF4E3vCkhFZWr6btUJX8fjVeYOd1AquxB0jiFx0hH77NYtX51J80!/b&bo=bgJuAQAAAAADFzE!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GiFmH6PBN.E2N5Vfye1hdHUE.JDn4sfrJ0z3plgAQftm2EPtBYf9zsZTNjBiyZvzx4!/b&bo=TwKwAAAAAAADF88!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GhQeVOHLlXOyz13mYZENCc0Gzur5UZy51BOnqCtqcNL2T0bAqT0Gwh19BRasF.xOrI!/b&bo=mALGAQAAAAADJ18!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3Uxvci7CcVtHIDo2Uee5N89hiASrR4yW3kgGZbji6XsmbopVXXi8Mwuo.ioEnSkP4q4pE!/b&bo=4QGeAAAAAAADF0w!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZalt8wpT8jglvV9B20j1RME6WtCgAItsofUDixFy2RkmQZdKi1Dvl.2uIeGUoic0Yt338JA2k61SUR64VtB1pY!/b&bo=wAIIAQAAAAADF*k!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZalt8wpT8jglvV9B20j1RNqUME95*7K1tYtSXrkFuGego5v6IWGbX9VXbwTmCx9dlm9eupZLoSdEnPBhw0JNyY!/b&bo=GQOYAQAAAAADF7E!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxvcK*d4xr9VF*r78aPCRihB85njP0Dhf2TtAINhbqAjuZd01depwTPEcAwoPurBTL9k!/b&bo=cwLXAAAAAAADF5Q!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxvelOZC.nytjENfK1nDJgLAQdK3tHjAJ9dRhm5Kto8ueSaSzzIjYobZX5ABr7BTRRz0!/b&bo=KwIRAQAAAAADFws!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxveMUT1eLby2CkAO5QXUJc.I*P3YassE.i7v1n4le3MFDeIOlForu.wRQ5UP82yJyAc!/b&bo=OQKNAAAAAAADF4Q!&rf=viewer_4">
+<meta property="article:published_time" content="2021-03-06T07:10:00.000Z">
+<meta property="article:modified_time" content="2021-03-06T07:41:24.086Z">
 <meta property="article:author" content="stillwarter">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcW3I*wOC0.aASDqcLvHTsJq24crqQ49QvHRDuf.lt7J1SODxqy1eNqt9l4RtTW3vdE6BKOTkmZAzo.2DqPalmcY!/b&bo=IQIvAQAAAAADFz8!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="stillwarter" type="application/atom+xml">
   
@@ -168,31 +184,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2.数列极限与性质" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      数列极限与性质
     </h1>
   
 
         
-        <a href="/2021/01/24/hello-world/" class="archive-article-date">
-  	<time datetime="2021-01-24T11:30:06.682Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-24</time>
+        <a href="/2021/03/06/2.%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%B8%8E%E6%80%A7%E8%B4%A8/" class="archive-article-date">
+  	<time datetime="2021-03-06T07:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>stillwarter.github.io起源一次test,我将用它记录我的时间。  </p>
-<hr>
-<p>2021.1.25 23:30<br>这是我第一次正式发布博客<br>我将在这里作为我的锚点，以周为单位总结我的收获得失与设定下一周的目标。</p>
-<hr>
-<p>珍惜我剩余的学生时代，“静水深流”，“天道酬勤”，这两句源于我高中尊敬的两位老师，我没有去践行他们，让时光从我手中溜走。<br>希望一切来得及。</p>
+        <h2 id="def"><a href="#def" class="headerlink" title="def"></a>def</h2><p>什么是数列：<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcW3I*wOC0.aASDqcLvHTsJq24crqQ49QvHRDuf.lt7J1SODxqy1eNqt9l4RtTW3vdE6BKOTkmZAzo.2DqPalmcY!/b&bo=IQIvAQAAAAADFz8!&rf=viewer_4">  </p>
+<p>数列极限定义：<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxRNQjP*tB79f9b82VlsSVjzANgFYPQdHNhiXUoZN0tY*c1jp8yL2aMnc6upC3Tp*sM!/b&bo=*QJGAQAAAAADF4o!&rf=viewer_4"><br>数列存在单调性和有界性（不存在其他函数性质）</p>
+<h2 id="无穷小"><a href="#无穷小" class="headerlink" title="无穷小"></a>无穷小</h2><p><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxTqpJ8jgKDsyeTZkoe74l3lfkUoWjHg4S9wBXQ9rGzMS6UZK9.AjSIbpTzfFlEHoZE!/b&bo=swKeAQAAAAADFxw!&rf=viewer_4"><br>前2个较简单，第3个是考点</p>
+<h2 id="无穷大"><a href="#无穷大" class="headerlink" title="无穷大"></a>无穷大</h2><p><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcVGE80K8n.rgR9KJCl3rgxRfmT8p9frRuV6HrCWot5U0C1R0KjS*0wIz9pFO7hJgBWjAJxgvkqO1mMHQr4jLbL8!/b&bo=oQLLAQAAAAADJ2s!&rf=viewer_4"><br>ps：无穷大与无界等价吗？<br>不等价。无穷大可以推出无界，无界无法推出无穷大。<br>{1,0,2,0,3,0,4,0…….}<br>我的理解：无穷大意味着存在这样的数列在第n项制极大，而无界存在这样的情况，如果坐标上不存在数列，我们就不能说它是有界的，即为无界，也不能说它是无穷大。故无界无法推出无穷大。</p>
+<h2 id="数列极限的性质"><a href="#数列极限的性质" class="headerlink" title="数列极限的性质"></a>数列极限的性质</h2><p><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GjvEshOe59MjX35bqX5gngN0w*tSrKbKAP6oRURin1XH32gnbD7RlTnQsQsTZVPR.k!/b&bo=pAITAgAAAAADF4U!&rf=viewer_4"><br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9Gjd92eAAu97pcicF4E3vCkhFZWr6btUJX8fjVeYOd1AquxB0jiFx0hH77NYtX51J80!/b&bo=bgJuAQAAAAADFzE!&rf=viewer_4"><br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GiFmH6PBN.E2N5Vfye1hdHUE.JDn4sfrJ0z3plgAQftm2EPtBYf9zsZTNjBiyZvzx4!/b&bo=TwKwAAAAAAADF88!&rf=viewer_4"><br>第一条是对的，<br>第二条是错的；<br>既然整条数列图像都趋近与a那么其奇数项也趋近于a；但是奇数项趋近于a不代表偶数项也趋近于a；<br>第三条是特例，不是说奇数项与偶数项的极限相等a，就说明数列极限就为a，记下来。</p>
+<h2 id="数列极限运算法则"><a href="#数列极限运算法则" class="headerlink" title="数列极限运算法则"></a>数列极限运算法则</h2><p><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcdrn6EnZ8YF5XtUkSB.E9GhQeVOHLlXOyz13mYZENCc0Gzur5UZy51BOnqCtqcNL2T0bAqT0Gwh19BRasF.xOrI!/b&bo=mALGAQAAAAADJ18!&rf=viewer_4"></p>
+<h2 id="数列极限判断法则！"><a href="#数列极限判断法则！" class="headerlink" title="数列极限判断法则！"></a>数列极限判断法则！</h2><p>夹逼定理:<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3Uxvci7CcVtHIDo2Uee5N89hiASrR4yW3kgGZbji6XsmbopVXXi8Mwuo.ioEnSkP4q4pE!/b&bo=4QGeAAAAAAADF0w!&rf=viewer_4"><br>这类题目求解重要的不是夹逼定理，它只是一个工具，重要的是怎么通过放缩来得到他左右2个式子并且要求这2个式子极限相等    </p>
+<p>单调有界原则:<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZalt8wpT8jglvV9B20j1RME6WtCgAItsofUDixFy2RkmQZdKi1Dvl.2uIeGUoic0Yt338JA2k61SUR64VtB1pY!/b&bo=wAIIAQAAAAADF*k!&rf=viewer_4"><br>（只要证明数列上的数都大于或小于某一个值就可说明具有有界性）<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZalt8wpT8jglvV9B20j1RNqUME95*7K1tYtSXrkFuGego5v6IWGbX9VXbwTmCx9dlm9eupZLoSdEnPBhw0JNyY!/b&bo=GQOYAQAAAAADF7E!&rf=viewer_4"></p>
+<p>单调有界，故既要有单调性也要有有界性  </p>
+<p>例题:<br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxvcK*d4xr9VF*r78aPCRihB85njP0Dhf2TtAINhbqAjuZd01depwTPEcAwoPurBTL9k!/b&bo=cwLXAAAAAAADF5Q!&rf=viewer_4"><br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxvelOZC.nytjENfK1nDJgLAQdK3tHjAJ9dRhm5Kto8ueSaSzzIjYobZX5ABr7BTRRz0!/b&bo=KwIRAQAAAAADFws!&rf=viewer_4"><br><img src="http://m.qpic.cn/psc?/V51Ru7Ag446pcI0w4GwE1ucAxR4Ejdtl/45NBuzDIW489QBoVep5mcZa7ae96K4pbESKdBE3UxveMUT1eLby2CkAO5QXUJc.I*P3YassE.i7v1n4le3MFDeIOlForu.wRQ5UP82yJyAc!/b&bo=OQKNAAAAAAADF4Q!&rf=viewer_4"></p>
+<h2 id="thinking"><a href="#thinking" class="headerlink" title="thinking"></a>thinking</h2><p>这节简述了基本的数列极限。<br>我们要明白什么是数列极限定义，记下来，什么时候数列存在极限以及极限的运算法则。</p>
+<p>数列呢我把他理解为一种特殊的函数，你看他有项数可以对应x，有值可以对应y；极限在这里第一次出现于教材，说明极限的存在要基于一个对象，我们为什么要研究极限，极限可以告诉我们说明？（因为考试要考，小声bb）。是的，我远远没有认知到数学的魅力，接受教育多年，我人就是一个初学者。</p>
 
       
 
@@ -221,12 +244,18 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -277,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/24/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/06/2.%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%B8%8E%E6%80%A7%E8%B4%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,15 +320,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/25/%E6%9E%97%E5%B8%88%E5%A7%90%E9%B2%A4%E5%B4%BD%E8%82%9D%E8%82%BE%E9%A6%8D/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          林师姐鲤崽肝肾馍
-        
-      </div>
-    </a>
   
+    <a href="/2021/03/06/1.%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数定义与性质</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -336,7 +361,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://example.com/2021/01/24/hello-world/",
+  id: "http://example.com/2021/03/06/2.%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90%E4%B8%8E%E6%80%A7%E8%B4%A8/",
   owner: 'stillwarter',
   repo: 'stillwarter.github.io',
   oauth: {
