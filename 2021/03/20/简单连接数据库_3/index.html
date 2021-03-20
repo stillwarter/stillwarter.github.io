@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>jsp简单传值 | stillwarter</title>
+  <title>简单连接数据库 | stillwarter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jsp简单传值">
+  <meta name="description" content="jdbc（java Database Connectivty）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsp简单传值">
-<meta property="og:url" content="http://example.com/2021/03/12/1.jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC/index.html">
+<meta property="og:title" content="简单连接数据库">
+<meta property="og:url" content="http://example.com/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/index.html">
 <meta property="og:site_name" content="stillwarter">
-<meta property="og:description" content="jsp简单传值">
+<meta property="og:description" content="jdbc（java Database Connectivty）">
 <meta property="og:locale">
-<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007dlGGJgy1gogsv2vu4nj30gn0dlaa3.jpg">
-<meta property="og:image" content="https://wx4.sinaimg.cn/mw690/007dlGGJgy1gogsv2wpc0j308h072748.jpg">
-<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/007dlGGJgy1gogsv2v6raj30fd02r745.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/007dlGGJgy1gogsv2w5okj30dv031dfm.jpg">
-<meta property="og:image" content="https://wx2.sinaimg.cn/mw690/007dlGGJgy1gogsv2x2tfj30fz02k0sl.jpg">
-<meta property="article:published_time" content="2021-03-12T03:10:00.000Z">
-<meta property="article:modified_time" content="2021-03-14T01:51:18.842Z">
+<meta property="article:published_time" content="2021-03-20T03:10:00.000Z">
+<meta property="article:modified_time" content="2021-03-20T15:56:19.370Z">
 <meta property="article:author" content="stillwarter">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wx1.sinaimg.cn/mw690/007dlGGJgy1gogsv2vu4nj30gn0dlaa3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="stillwarter" type="application/atom+xml">
   
@@ -175,20 +169,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1.jsp简单传值" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-简单连接数据库_3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jsp简单传值
+      简单连接数据库
     </h1>
   
 
         
-        <a href="/2021/03/12/1.jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-03-12T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
+        <a href="/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/" class="archive-article-date">
+  	<time datetime="2021-03-20T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
 </a>
         
       </header>
@@ -197,14 +191,58 @@
       
         <meta name="referrer" content="no-referrer">
 
-<h1 id="jsp简单传值"><a href="#jsp简单传值" class="headerlink" title="jsp简单传值"></a>jsp简单传值</h1><a id="more"></a> 
+<h1 id="jdbc（java-Database-Connectivty）"><a href="#jdbc（java-Database-Connectivty）" class="headerlink" title="jdbc（java Database Connectivty）"></a>jdbc（java Database Connectivty）</h1><a id="more"></a> 
 
-<h2 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1.配置环境"></a>1.配置环境</h2><p><img src="https://wx1.sinaimg.cn/mw690/007dlGGJgy1gogsv2vu4nj30gn0dlaa3.jpg"></p>
-<h2 id="2-准备好2个jsp页面"><a href="#2-准备好2个jsp页面" class="headerlink" title="2.准备好2个jsp页面"></a>2.准备好2个jsp页面</h2><p><img src="https://wx4.sinaimg.cn/mw690/007dlGGJgy1gogsv2wpc0j308h072748.jpg"></p>
-<h2 id="3-准备好一个表单"><a href="#3-准备好一个表单" class="headerlink" title="3.准备好一个表单"></a>3.准备好一个表单</h2><p><img src="https://wx1.sinaimg.cn/mw690/007dlGGJgy1gogsv2v6raj30fd02r745.jpg"></p>
-<h2 id="4-使用request读取数据"><a href="#4-使用request读取数据" class="headerlink" title="4.使用request读取数据"></a>4.使用request读取数据</h2><p><img src="https://wx3.sinaimg.cn/mw690/007dlGGJgy1gogsv2w5okj30dv031dfm.jpg"></p>
-<h2 id="5-简单处理转码"><a href="#5-简单处理转码" class="headerlink" title="5.简单处理转码"></a>5.简单处理转码</h2><p><img src="https://wx2.sinaimg.cn/mw690/007dlGGJgy1gogsv2x2tfj30fz02k0sl.jpg"></p>
-<h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2><p>歪比歪比，好吧我把学的全还给老师了，这个坑是复习坑。。</p>
+<p>我看到一个新事物时，我会问自己<br>他是什么，做什么，怎么用，为什么用它，</p>
+<p>在web开发中，不可避免的要使用数据库来储存和管理数据，为了在java中提供数据库访问支持，sun公司在1996年提供一套访问数据的标准类库，jdbc</p>
+<h2 id="jdbc组成"><a href="#jdbc组成" class="headerlink" title="jdbc组成"></a>jdbc组成</h2><p>(1)JDBC驱动管理器：负责注册特定的JDBC驱动器，主要通过java.sql. Driver Manager类实现。</p>
+<p>(2)JDBC驱动器API：由Sun公司负责制定，其中最主要的接口是java.sql. Driver接口。</p>
+<p>(3)JDBC驱动器：它是一种数据库驱动，由数据库厂商创建，也称为JDBC驱动程序JDBC驱动器实现了JDBC驱动器API，负责与特定的数据库连接，以及处理通信细节。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/140885502">什么是JDBC？这篇文章告诉你(知乎)</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1.加载（注册）数据库<br>2.建立链接<br>3.执行SQL语句<br>4.处理结果集<br>5.关闭数据库  </p>
+<pre><code>&lt;%
+    try&#123;
+        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+        Connection coon=DriverManager.getConnection(&quot;jdbc:mysql://127.0.0.1:3306/blog&quot;, &quot;root&quot;, &quot;123456&quot;);
+        Statement st=coon.createStatement();
+        ResultSet re=st.executeQuery(&quot;select * from user&quot;);
+        while(re.next())&#123;
+            out.write(re.getString(&quot;username&quot;));
+            out.write(&quot; &quot;);
+        &#125;
+
+        if(re!=null)&#123;
+            try&#123;
+                re.close();
+            &#125;catch(Exception e)&#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        if(st!=null)&#123;
+            try&#123;
+                st.close();
+            &#125;catch(Exception e)&#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        if(coon!=null)&#123;
+            try&#123;
+                coon.close();
+            &#125;catch(Exception e)&#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+    &#125;
+
+    catch(Exception e)&#123;
+        out.write(e.getMessage());
+    &#125;
+%&gt;</code></pre>
+<p>ps:为什么要使用try catch（好吧我几乎不记得老师当时是怎么讲trycatch的了）<br>还是一样，是什么，做什么，怎么用，为什么要用他</p>
+<p>在这里，我把trycatch理解为一种处理程序异常或的一种机制。</p>
+<p>为什么要写try…catch，根本原因在于程序会出现可能的问题，而这个问题是指：阻止当前方法或者作用域继续执行的问题（此句引用《Java编程思想第四版》对Java异常的定义），它会阻止你的程序沿着你预先编写的逻辑继续往下运行。所有的这种可能出现的问题在Java中统一叫做Throwable。而Throwable又可以归为2大类: Error 和Exception<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/search?type=content&q=java%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8try%20catch">Java中try…catch使用经验总结(知乎)</a></p>
+<p>ps:还有一个老师所讲的细节，关于re.next()，这段代码用于判断数据是否为空，在一个表内2端分别有一组空白数据，如果是空表，则只有一组空数据。</p>
+<h2 id="thinking"><a href="#thinking" class="headerlink" title="thinking"></a>thinking</h2><p>不想排版…</p>
 
       
 
@@ -295,7 +333,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/12/1.jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +347,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/14/HumanEvolutionGoingNowhere/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2000 English2 passage2
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/11/unit2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">unit2</div>
+    <a href="/2021/03/20/xml%E8%A7%84%E8%8C%83_1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">xml规范</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -359,7 +388,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://example.com/2021/03/12/1.jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC/",
+  id: "http://example.com/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/",
   owner: 'stillwarter',
   repo: 'stillwarter.github.io',
   oauth: {
