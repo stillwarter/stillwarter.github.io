@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/3 | stillwarter</title>
+  <title>mybatis简单实用 | stillwarter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="stillwarter">
-<meta property="og:url" content="http://example.com/archives/2021/03/page/2/index.html">
+  <meta name="description" content="mybatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mybatis简单实用">
+<meta property="og:url" content="http://example.com/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="stillwarter">
+<meta property="og:description" content="mybatis">
 <meta property="og:locale">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9fk59j30920ekdg6.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xaofflj30e3068jrh.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9q7hqj30f0092glw.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9z3xxj30fz05zdfy.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xa79ezj309z0brq33.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xadmbzj30kv0c674m.jpg">
+<meta property="article:published_time" content="2021-03-30T03:10:00.000Z">
+<meta property="article:modified_time" content="2021-03-29T16:02:47.430Z">
 <meta property="article:author" content="stillwarter">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9fk59j30920ekdg6.jpg">
   
     <link rel="alternative" href="/atom.xml" title="stillwarter" type="application/atom+xml">
   
@@ -164,36 +176,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-4.mybatis简单使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mybatis简单实用
+    </h1>
+  
+
+        
+        <a href="/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-03-30T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer">
+
+<h1 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h1><a id="more"></a> 
+
+<p>还是一样，是什么干什么怎么用为什么要用它</p>
+<p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
+<p>这样一段话好像还不足以让我完全理解</p>
+<p>MyBatis 本是apache的一个开源项目iBatis, 2010年这个项目由apache software foundation 迁移到了google code，并且改名为MyBatis。是一个基于Java的持久层框架</p>
+<p>MyBatis 框架也被称之为 ORM（Object/Relational Mapping，即对象关系映射）框架</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>首先我们准备好需要的jar包和xml配置文档，准备好后我们要有一个能够运行他的类去观测我们的结果，起名为mybatistest。然后根据mybatis特性实现实体类封装，我作为一个菜鸟的理解就是用一个类对数据库表对象进行映射，就像数学函数一样一一对应。再之后我们准备一个dao层（package）存放接口，那么这个小项目的目录就是这样<br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9fk59j30920ekdg6.jpg"><br>思路：<br>1.创建Dynamic web project<br>2.导jar包<br>3.创建数据库<br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xaofflj30e3068jrh.jpg"><br>4.创建不同的package<br>5.配置xml文件<br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9q7hqj30f0092glw.jpg"><br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16x9z3xxj30fz05zdfy.jpg">  </p>
+<p>6.准备各种类<br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xa79ezj309z0brq33.jpg"><br><img src="https://wx1.sinaimg.cn/large/007dlGGJgy1gp16xadmbzj30kv0c674m.jpg"><br>7.准备接口</p>
+<pre><code>package com.stillwarter.dao;
+
+import java.util.List;
+
+import com.stillwarter.mybatistest.User;
+
+public interface IUserDAO &#123;
+    public List&lt;User&gt; selectAllUser();
+&#125;</code></pre>
+<p>7.测试运行  </p>
+<p>ps：源码在我的github</p>
+<h2 id="thinking"><a href="#thinking" class="headerlink" title="thinking"></a>thinking</h2><p>这个东西折磨我很久了，由于疫情期间上课不认真，也没人教导，自学能力弱，导致这个东西我一直学的很差。我会从github上看看别人的例子，但是一直看不明白。因为水平太低导致看不懂，低效率的学习减弱积极性，就这样一直负反馈，蛋丝美柚罐吸，反正我不是什么正经人。<br>还好我们还有与ssm相关的课程，线上线下的课程还是不一样，至少出了问题可以直接问老师，而且问的很明白，不像线上一样，很不方便。<br>1.那么那些dao，entity，pojo包啥的是什么，为什么要这样分？<br>老蒋原话，当一个项目繁荣之后必定会对他们进行细分，我们把实体类分一块，把xml分一块等等。但是这与包名并没有什么关系，至于我看到的dao，dal等，只是一些约定熟成的表现。只要你能正确的输入路径，其实你不分也是可以的，就像我们这与的小项目。<br>2.为什么要用接口<br>这样的问题好像有点蠢，无非是为了提高效率提升程序的健壮性<br>康康这个<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28684588">https://zhuanlan.zhihu.com/p/28684588</a><br>3.一点要注意xml文件所对应路径是否一致，我呆呆为了一个字母白过半小时  </p>
+<p>ps：需要的数据库自己做一个简单的，注意用户，密码，端口，数据库名一一对应。如果不知道这些先看书或者百度再去看源码，这已经是一个很简单的mybatis的实现了，如果还是有问题，如果你不嫌麻烦，可以在我的b站号留言，我会尽量回答。</p>
+<h2 id="the-end"><a href="#the-end" class="headerlink" title="the end"></a>the end</h2><p>这点东西也没多少写的，在你知道怎么去实现他的时候，就会感觉自己曾经的愚钝。走走停停漫漫时光，我学到的东西没有多少。就算让我自己一直自学，可是一些问题依旧摆在那里，总是会有各种各样的问题出现，总是有看不懂的英文报错。所以你必须花费时间去解决，有一个经验丰富的老师还好，若是没有呢，你或许花上半小时就看到自己错误的单词拼写，或许还在头疼上下逻辑错误，或许根本不懂这到底是如何实现的。你的时间消散在这里，消磨你的耐心，你的意志。我真的羡慕那些学的很快的，我没有那样的天赋，只有慢慢去拼凑，然后再半夜坐在电脑前写点小结。<br>但是我还是希望能够对一些人有点帮助，我们学生不会提问，网络的解答不一定有效，愚钝的同学不一定看得懂，懒的人不知道这些….<br>尽管只有师姐知道这个地址。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/21/forgetandremember2/" class="archive-article-date">
-  	<time datetime="2021-03-21T00:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/21/forgetandremember2/">I&#39;ve been read before2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,364 +261,130 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/" class="archive-article-date">
-  	<time datetime="2021-03-20T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/03/30/forgetandremember8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          I&#39;ve been read before8
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/28/forgetandremember7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">I&#39;ve been read before7</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/20/%E7%AE%80%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93_3/">简单连接数据库</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/20/xml%E8%A7%84%E8%8C%83_1/" class="archive-article-date">
-  	<time datetime="2021-03-20T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/20/xml%E8%A7%84%E8%8C%83_1/">xml规范</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/19/forgetandremember1/" class="archive-article-date">
-  	<time datetime="2021-03-19T15:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/19/forgetandremember1/">I&#39;ve been read before</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/18/passage4/" class="archive-article-date">
-  	<time datetime="2021-03-18T00:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/18/passage4/">2000 English2 passage4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/15/passage3/" class="archive-article-date">
-  	<time datetime="2021-03-15T15:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/15/passage3/">2000 English2 passage3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/14/HumanEvolutionGoingNowhere/" class="archive-article-date">
-  	<time datetime="2021-03-14T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/14/HumanEvolutionGoingNowhere/">2000 English2 passage2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/12/jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC_1/" class="archive-article-date">
-  	<time datetime="2021-03-12T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/12/jsp%E7%AE%80%E5%8D%95%E4%BC%A0%E5%80%BC_1/">jsp简单传值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/11/unit2/" class="archive-article-date">
-  	<time datetime="2021-03-11T14:02:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/11/unit2/">unit2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/01/stillwords_1/" class="archive-article-date">
-  	<time datetime="2021-03-01T14:20:14.454Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/01/stillwords_1/">stillwarter</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2021/03/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2021/03/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2021/03/page/3/">3</a><a class="extend next" rel="next" href="/archives/2021/03/page/3/">Next &amp;raquo;</a>
-    </nav>
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://example.com/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/",
+  owner: 'stillwarter',
+  repo: 'stillwarter.github.io',
+  oauth: {
+    client_id: '36305e0f8611d09785af',
+    client_secret: '5de66c65bc01560e1cf963bc244b3b14a5cc21dd',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -594,8 +416,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
