@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | stillwarter</title>
+  <title>xml基础与dtd约束 | stillwarter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="stillwarter">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="xml基础开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xml基础与dtd约束">
+<meta property="og:url" content="http://example.com/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="stillwarter">
+<meta property="og:description" content="xml基础开发">
 <meta property="og:locale">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJly1gp6cdm4x7bj30n308iab9.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/007dlGGJly1gp6cdm9e91j30lu0eyaae.jpg">
+<meta property="article:published_time" content="2021-04-02T03:10:00.000Z">
+<meta property="article:modified_time" content="2021-04-03T02:29:59.407Z">
 <meta property="article:author" content="stillwarter">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wx1.sinaimg.cn/large/007dlGGJly1gp6cdm4x7bj30n308iab9.jpg">
   
     <link rel="alternative" href="/atom.xml" title="stillwarter" type="application/atom+xml">
   
@@ -164,36 +172,165 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-xml基础开发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      xml基础与dtd约束
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/" class="archive-article-date">
+
+        
+        <a href="/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/" class="archive-article-date">
   	<time datetime="2021-04-02T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/">xml基础与dtd约束</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer">
 
-        <div class="article-info info-on-right">
-          
+<h1 id="xml基础开发"><a href="#xml基础开发" class="headerlink" title="xml基础开发"></a>xml基础开发</h1><a id="more"></a>
+<h2 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h2><p>大黄兔老师去一个地方参加考试，考完要向监考官上交一份文件，但是老师没有规定命名规则，于是出现各种各样的文件，监考官大怒，所有不规范的命名都先扣10分。<br>所以，规范与限定是很重要的，这样的约束同样也存在xml文件中。</p>
+<pre><code>规范的XML文件和有效的XML文件：
+XML的核心是使用标记组织数据之结构，以便让信息的交互更加方便。 
+规范性仅仅是XML语言的基本语法，没有对XML文件怎样组织数据进行具体的限制。在某些系统中，如果不对XML怎样组织数据进行合理的约束，那么对同一问题编写的XML文件，在数据组织结构上就可能有很大的不同。 </code></pre>
+<p>对XML的数据结构进行限制有两种方式：使用文档类型定义（Document Type Definition，DTD）和XML Schema模式。这里我们讲前者dtd<br>一个规范的XML文件如果和某个DTD文件相关联，并遵守该DTD文件规定的约束条件，就称之为有效的XML文件。 </p>
+<hr>
+<h2 id="dtd是什么做什么怎么用为什么要用他"><a href="#dtd是什么做什么怎么用为什么要用他" class="headerlink" title="dtd是什么做什么怎么用为什么要用他"></a>dtd是什么做什么怎么用为什么要用他</h2><h3 id="dtd是什么"><a href="#dtd是什么" class="headerlink" title="dtd是什么"></a>dtd是什么</h3><p>一个dtd例子</p>
+<pre><code>&lt;!ELEMENT 商店营业时间 (商店*) &gt;
+&lt;!ELEMENT 商店 (商店名称,开门时间,关门时间)&gt;
+&lt;!ELEMENT 商店名称 (#PCDATA)&gt; 
+&lt;!ELEMENT 开门时间 (#PCDATA)&gt; 
+&lt;!ELEMENT 关门时间 (#PCDATA)&gt; </code></pre>
+<p>它似乎没有头文件与根标签（以utf-8编码保存）</p>
+<h3 id="dtd做什么"><a href="#dtd做什么" class="headerlink" title="dtd做什么"></a>dtd做什么</h3><p>前文说了用于对xml数据进行限制</p>
+<h3 id="dtd怎么用"><a href="#dtd怎么用" class="headerlink" title="dtd怎么用"></a>dtd怎么用</h3><p>一个XML文件只有和某个DTD文件相关联，才会受到该DTD文件的约束。<br>所以要使用dtd，必须要用他和xml关联</p>
+<h4 id="与关联相关的知识点"><a href="#与关联相关的知识点" class="headerlink" title="与关联相关的知识点"></a>与关联相关的知识点</h4><p>在XML文件中使用“文档类型声明”与一个DTD文件相关联。<br>有两种形式的关联：SYSTEM 和 PUBLIC。<br>public在工程，商业上应用更广泛，我们现在先学system感受一下。大黄兔老师如是说。所以我略去public的声明</p>
+<h5 id="system声明"><a href="#system声明" class="headerlink" title="system声明"></a>system声明</h5><pre><code>&lt;!DOCTYPE 根标记的名称  SYSTEM  &quot;DTD文件的URI&quot;&gt; 
+例：&lt;!DOCTYPE 商店营业时间 SYSTEM &quot;limitShop.dtd&quot;&gt; </code></pre>
+<h3 id="为什么要用dtd"><a href="#为什么要用dtd" class="headerlink" title="为什么要用dtd"></a>为什么要用dtd</h3><p>换一种说法为什么要对xml文件进行限制<br>对XML组织数据进行约束的主要原因有两个，一是让XML的数据组织的更加合理,符合系统的要求,二是便于维护XML中的数据，从而提高整个系统的可维护性。 </p>
+<p>ps:如何检查有效性<br>当用浏览器打开一个有效的XML文件时，一些浏览器的XML解析器仅仅检查XML文件是否是规范的、检查XML所关联的DTD文件是否有语法错误，并不检查XML文件是否遵守该DTD规定的约束条件。<br>可以使用DOM 解析器来检查一个XML文件是否是有效的。</p>
+<p>“我们目前就用dom解析器就可以了。其实还可以用java来做的，但我们这儿就不讲了，有兴趣的自己了解一下。”大黄兔老师如是说。 </p>
+<h3 id="dtd中的元素"><a href="#dtd中的元素" class="headerlink" title="dtd中的元素"></a>dtd中的元素</h3><p>xml有自己的元素，dtd也一样</p>
+<h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><pre><code>&lt;!ELEMENT  标记名称  标记的约束条件 &gt;
+例如：&lt;!ELEMENT  学生  (学号,姓名) &gt;</code></pre>
+<p>DTD文件中的元素的作用与其在DTD文件中的书写位置无关。<br>DTD文件中不允许使用多个元素约束同一个标记。    </p>
+<h5 id="约束标记只包含有文本数据"><a href="#约束标记只包含有文本数据" class="headerlink" title="约束标记只包含有文本数据"></a>约束标记只包含有文本数据</h5><p>如果准备约束一个标记没有子标记，只能有文本数据，那么“标记的约束条件”是用小括号括起的#PCDATA，格式如下：</p>
+<pre><code>&lt;!ELEMENT  标记名称  (#PCDATA) &gt;
+例如： &lt;!ELEMENT  姓名  (#PCDATA) &gt;</code></pre>
+<h5 id="约束标记的子标记-1元素的格式"><a href="#约束标记的子标记-1元素的格式" class="headerlink" title="约束标记的子标记_1元素的格式"></a>约束标记的子标记_1元素的格式</h5><pre><code>若要约束XML文件中某个标记可以有哪些子标记，那么声明的“标记的约束条件”是用小括号括起的子标记列表，格式为：
+&lt;!ELEMENT  标记名称  (子标记列表) &gt;</code></pre>
+<p>注： “子标记列表”中用逗号分隔列出的若干个标记是有先后顺序的</p>
+<h5 id="约束标记的子标记-2模式限定符的使用"><a href="#约束标记的子标记-2模式限定符的使用" class="headerlink" title="约束标记的子标记_2模式限定符的使用"></a>约束标记的子标记_2模式限定符的使用</h5><pre><code>1、元素格式 &lt;!ELEMENT  标记名称  (子标记列表) &gt;中的“子标记列表”的每个标记的后面可以尾加模式限定符号来限定该子标记出现的次数。限定符号有：
++：尾加该限定符号的子标记必须出现一次或多次。
+*：尾加该限定符号的子标记可出现零次或多次。
+？：尾加该限定符号的子标记可出现零次或一次。
+不尾加限定符号的子标记必须出现且只能出现一次。
+例如：&lt;!ELEMENT 库存商品 (商品名称+,管理员?) &gt;
+2、“子标记列表”中的子标记也可以是几个标记的“或运算”，而且“或运算”必须用小括号扩起，例如，元素：
+&lt;!ELEMENT 应聘者  (姓名,(本科|硕士|博士),性别 ) &gt;
+&lt;!ELEMENT 学生  (姓名,(奖励|处分)*,性别 ) &gt; </code></pre>
+<h5 id="约束标记的混合内容"><a href="#约束标记的混合内容" class="headerlink" title="约束标记的混合内容"></a>约束标记的混合内容</h5><pre><code>如果允许标记的内容即可以有可显示的文本数据，也可以有子标记，那么在DTD文件中，元素的“标记的约束条件”是关键字“#PCDATA”和若干个子标记的“或运算”，而且该“或运算”必须用小括号括起并尾加一个“*”号。
+格式如下：
+    &lt;!ELEMENT  标记名称  (#PCDATA|子标记1|子标记2…|子标记m)*&gt; </code></pre>
+<h5 id="EMPTY和ANY"><a href="#EMPTY和ANY" class="headerlink" title="EMPTY和ANY"></a>EMPTY和ANY</h5><pre><code>如果准备约束一个标记是空标记，或者是只含有空字符的非空标记，元素的“标记的约束条件”可以是关键字“EMPTY”。
+如果不准备对一个标记有任何约束，元素的“标记的约束条件”可以是关键字“ANY”。</code></pre>
+<h5 id="dtd的完整性"><a href="#dtd的完整性" class="headerlink" title="dtd的完整性"></a>dtd的完整性</h5><pre><code>（1）不允许无穷嵌套
+如果一个DTD元素约束某个标记可以出现某个子标记，那么对该子标记进行约束的DTD元素就不能约束该标记的子标记是它的父标记。
+DTD文件中同时出现下列两个元素是不允许的。 
+      &lt;!ELEMENT 学生 (姓名,性别) &gt;
+      &lt;!ELEMENT 姓名 (学生,拼音) &gt;
+（2）XML文件中的每个标记都必须在DTD中有相应元素进行约束。  </code></pre>
+<h5 id="dtd中的属性约束列表"><a href="#dtd中的属性约束列表" class="headerlink" title="dtd中的属性约束列表"></a>dtd中的属性约束列表</h5><h6 id="ATTLIST属性约束列表-1"><a href="#ATTLIST属性约束列表-1" class="headerlink" title="ATTLIST属性约束列表_1"></a>ATTLIST属性约束列表_1</h6><pre><code>可以通过在DTD文件中定义属性约束列表来约束XML文件中的标记的属性。 
+DTD使用关键字ATTLIST定义一个属性约束列表来约束XML文件中标记的属性。
+在DTD中定义属性约束列表的格式为：
+        &lt;!ATTLIST  标记名称
+            属性名称 属性类型 默认值情况
+            属性名称 属性类型 默认值情况
+            … ….
+        &gt;</code></pre>
+<h6 id="ATTLIST属性约束列表-2"><a href="#ATTLIST属性约束列表-2" class="headerlink" title="ATTLIST属性约束列表_2"></a>ATTLIST属性约束列表_2</h6><pre><code>1、属性名称
+属性名称可以由字母、数字、下划线（“_”）、点（“.”）或连字符（“-”）组成，但必须以字母或下划线开头，属性的名称区分大小写。
+2、属性类型
+属性值一定是一个字符串，那么属性类型就决定了属性可以用怎样的字符串作为它的值。
+注：属性值中都不能含有含有左尖括号 “&lt;”、右尖括号 “&gt;”、与符号“&amp;” 、单引号“&#39;”和双引号“&quot;”，如果想使用这些字符，可以使用实体引用。要特别注意的是，属性值区分大小写。
+3、默认值情况
+ATTLIST定义的属性约束列表是为了约束XML文件中标记的属性，ATTLIST属性约束列表：
+   &lt;!ATTLIST  标记名称  属性名称 属性类型  默认值情况 &gt;
+其中，“默认值情况”是对标记的属性进行约束的细节条件。</code></pre>
+<h6 id="属性的默认值"><a href="#属性的默认值" class="headerlink" title="属性的默认值"></a>属性的默认值</h6><pre><code>“默认值情况”举例：
+● “默认值情况”是字符串，例如：
+    &lt;!ATTLIST  桌子 color CDATA &quot;red&quot;&gt; 
+“默认值情况”是字符串&quot;red&quot;。
+● “默认值情况”是#IMPLIED或#REQUIRED，例如：
+&lt;!ATTLIST 汽车  车牌  CDATA  #REQUIRED&gt; 
+“默认值情况”是#REQUIRED。
+● “默认值情况”是#FIXED  &quot;字符串&quot;。例如：
+&lt;!ATTLIST 火警电话  号码  CDATA  #FIXED &quot;119&quot;&gt;
+“默认值情况”是#FIXED &quot;119&quot;。</code></pre>
+<p><img src="https://wx1.sinaimg.cn/large/007dlGGJly1gp6cdm4x7bj30n308iab9.jpg"></p>
+<h6 id="属性类型"><a href="#属性类型" class="headerlink" title="属性类型"></a>属性类型</h6><p>常用类型：CDATA，Enumerated，NMTOKEN，NMTOKENS，ID，IDREF，IDREFS  </p>
+<pre><code>    1．CDATA类型
+    对于CDATA（Character Data）类型的属性，该属性的值可以是任何一个字符串，但是，字符串中不能含有含有&lt;、&gt;、&amp;、’和”，如果想使用这些字符，可以使用实体引用。
+    2．Enumerated 类型
+    对于类型是Enumerated的属性，该属性只可以是枚举值。
+    在ATTLIST属性约束列表中使用Enumerated类型的格式如下：
+    &lt;!ATTLIST 标记名称  属性名称  (属性值1|属性值2|…|属性值n)  默认值情况 &gt;
+    3．NMTOKEN类型 
+    如果属性的类型是NMTOKEN类型的属性，属性值可以由字母、数字、下划线（“_”）、点（“.”）或连字符（“-”）组成，属性值中不能含有空格字符（属性值也可以用数字、点或连字符开头）。
+    4．NMTOKENS类型 
+    对于NMTOKEN类型的属性，其属性值中不能含有空格。如果需要某个属性的属性值含有空格，而且被空格分隔开的子字符串符合NMTOKEN类型属性的属性值之规定，那么就可以将属性的类型取为NMTOKENS类型。
+    5．ID类型
+    ID类型属性的值具有互斥性，相同标记的该属性值必须不同。
+    注意：
+    （1）ID类型的属性值可以由字母、数字、下划线（“_”）、点（“.”）或连字符（“-”）组成，但必须以字母或下划线开头。
+    （2）需要特别注意的是ID类型属性的“默认值情况”只能是“#REQUIRED”和“IMPLIED”。
+    6．IDREF类型 
+    如果通过标记的属性值来判断标记之间的联系，就可以在标记中使用IDREF（Identifier Reference）类型的属性。 
+    IDREF类型属性的属性值只能取某个标记中ID类型属性的属性值。
+    7．IDREFS类型 
+    IDREFDS类型属性的属性值可以是若干个其它ID属性的属性值的组合。
+    对于IDREFS类型的属性，它的值可以是用空格分隔的若干个其它ID属性的属性值。</code></pre>
+<h5 id="内部dtd"><a href="#内部dtd" class="headerlink" title="内部dtd"></a>内部dtd</h5><pre><code>可以把DTD文件的内容直接写在XML文件的内部，相对外部DTD文件，这样的内容称做XML文件的内部DTD。 
+在XML文件中，内部DTD用“&lt;!DOCTYPE 根标记名称 [”开始，以“]&gt;”结束。
+内部DTD必须写在XML声明和根标记的开始标签之间。
+一个XML文件如果遵守内部DTD规定的约束条件，也称作有效的XML文件。   </code></pre>
+<p><img src="https://wx1.sinaimg.cn/large/007dlGGJly1gp6cdm9e91j30lu0eyaae.jpg"><br>ps:可同时使用内部dtd和外部dtd</p>
+<h2 id="thinking"><a href="#thinking" class="headerlink" title="thinking"></a>thinking</h2><p>说说思维路线：<br>引例（为什么要用dtd去约束xml文件）–&gt;什么是dtd–&gt;dtd的各种用法<br>就这。<br>为什么还要学这个啊，盖亚！！！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,364 +342,121 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/01/forgetandremember10/" class="archive-article-date">
-  	<time datetime="2021-04-01T15:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/01/forgetandremember10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">I&#39;ve been read before10</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/forgetandremember10/">I&#39;ve been read before10</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/01/forgetandremember11/" class="archive-article-date">
-  	<time datetime="2021-04-01T15:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/forgetandremember11/">I&#39;ve been read before11</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/31/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E2%80%8B/" class="archive-article-date">
-  	<time datetime="2021-03-31T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/31/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E6%A6%82%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E2%80%8B/">函数与极限</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/30/forgetandremember9/" class="archive-article-date">
-  	<time datetime="2021-03-30T15:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/30/forgetandremember9/">I&#39;ve been read before9</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/30/forgetandremember8/" class="archive-article-date">
-  	<time datetime="2021-03-30T14:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/30/forgetandremember8/">I&#39;ve been read before8</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-03-30T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/30/4.mybatis%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">mybatis简单实用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/28/forgetandremember7/" class="archive-article-date">
-  	<time datetime="2021-03-28T14:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/28/forgetandremember7/">I&#39;ve been read before7</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/28/forgetandremember6/" class="archive-article-date">
-  	<time datetime="2021-03-28T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/28/forgetandremember6/">I&#39;ve been read before6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/24/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2021-03-24T03:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/24/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90%E6%80%BB/">函数与极限</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://example.com/2021/04/02/xml%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91/",
+  owner: 'stillwarter',
+  repo: 'stillwarter.github.io',
+  oauth: {
+    client_id: '36305e0f8611d09785af',
+    client_secret: '5de66c65bc01560e1cf963bc244b3b14a5cc21dd',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -594,8 +488,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
