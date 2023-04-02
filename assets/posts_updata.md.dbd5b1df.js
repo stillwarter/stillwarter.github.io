@@ -1,1 +1,0 @@
-import{_ as t,o as a,c as e}from"./chunks/framework.598f53ee.js";const m=JSON.parse('{"title":"手动更新测试","description":"","frontmatter":{"tags":"github","title":"手动更新测试"},"headers":[],"relativePath":"posts/updata.md"}'),s={name:"posts/updata.md"};function o(r,p,c,n,d,i){return a(),e("div")}const u=t(s,[["render",o]]);export{m as __pageData,u as default};
